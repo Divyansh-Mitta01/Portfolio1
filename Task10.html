@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Task10</title>
+  </head>
+  <body>
+    <h1 style="text-align:center"><b>LOGIN FORM</b></h1>
+  
+    <div class="container mt-4">
+<div class="col-md-3">
+  <label for="formGroupExampleInput" class="form-label">Username</label>
+  <input type="text" class="form-control" id="abc" placeholder="username">
+</div>
+<div class="col-md-3">
+  <label for="formGroupExampleInput2" class="form-label">Password</label>
+  <input type="password" class="form-control" id="xyz" placeholder="password">
+</div>
+</div>
+
+
+<div class="container mt-4">
+    <button type="button" class="btn btn-primary" onclick="obc()">Log In</button>
+<button type="button" class="btn btn-secondary" onclick="reset()">Reset</button>
+</div>
+
+
+<script>
+    let arr=[{username:"aditya", password:"adi@123"}, {username:"aman", password:"ama@123"}, {username:"mukul", password:"muk@123"}, {username:"arpit", password:"arp@123"}, {username:"anant", passsword:"ana@123"}, {username:"deepak", password:"dep@123"}, {username:"harsh", passsword:"har@123"},{username:"nikhil", password:"nik@123"}, {username:"piyush", password:"piy@123"}, {username:"shivam", password:"shi@123"}];
+
+    function obc(){
+        let a=document.getElementById("abc").value;
+        let b=document.getElementById("xyz").value;
+        for(i=0;i<arr.length;i++){
+        if(a.toLowerCase()==arr[i].username && b==arr[i].password){
+            alert("You are successfully logged in");
+            return;
+        }
+    }
+    alert("Incorrect Credentials");
+    }
+    function reset(){
+      document.getElementById("abc").value = "";
+      document.getElementById("xyz").value = "";
+    }
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>
